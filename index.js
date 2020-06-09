@@ -20,6 +20,7 @@ mongoose.connect(config.mongoURI, {
   .catch(err => console.log(err))
 
 app.get('/', (req, res) => res.send('hello world. this is nodemon test'))
+app.get('/api/hello', (req, res) => res.send("hello"))
 
 //회원가입
 app.post('/api/users/register', (req, res) => {
